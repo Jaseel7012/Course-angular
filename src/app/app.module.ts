@@ -4,6 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CourseAddComponent } from './course-add/course-add.component';
 import { CourseViewComponent } from './course-view/course-view.component';
+import { RouterModule,Routes } from '@angular/router';
+const myroute:Routes=[
+  {
+    path:'',
+    'component':CourseAddComponent
+  },
+  {
+    path:'view',
+    'component':CourseViewComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -12,7 +23,8 @@ import { CourseViewComponent } from './course-view/course-view.component';
     CourseViewComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(myroute)
   ],
   providers: [],
   bootstrap: [AppComponent]
