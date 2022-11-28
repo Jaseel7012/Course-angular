@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { CourseAddComponent } from './course-add/course-add.component';
 import { CourseViewComponent } from './course-view/course-view.component';
 import { RouterModule,Routes } from '@angular/router';
+import { FormControl, FormsModule } from '@angular/forms';
 const myroute:Routes=[
   {
     path:'',
@@ -24,7 +25,8 @@ const myroute:Routes=[
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(myroute)
+    RouterModule.forRoot(myroute),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
