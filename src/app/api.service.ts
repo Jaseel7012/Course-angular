@@ -11,4 +11,7 @@ export class ApiService {
   {
     return this.http.get("https://mylinkurcodesapp.herokuapp.com/getcourses")
   }
+  addcourse=(dataToSend:any)=>{
+    return this.http.post("http://mylinkurcodesapp.herokuapp.com/addcourse",dataToSend)
+  }
 }
